@@ -19,7 +19,7 @@ function preload()
 function setup() {
 	createCanvas(800, 750);
 
-	// fairyVoice.play();
+	fairyVoice.play();
 
 	fairy = createSprite(130, 520);
 	fairy.addAnimation("fairyflying",fairyImg);  
@@ -28,6 +28,7 @@ function setup() {
 	star = createSprite(650,30);
 	star.addImage(starImg);
 	star.scale = 0.2;
+
 
 	engine = Engine.create();
 	world = engine.world;
@@ -38,8 +39,6 @@ function setup() {
 	Engine.run(engine);
 
 }
-
-
 
 
 function draw() {
@@ -72,4 +71,3 @@ function keyPressed() {
 		Matter.Body.setStatic(starBody,false); 
 	}
 }
-
